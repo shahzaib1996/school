@@ -72,24 +72,16 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <strong> MARRYWOOD <hr style="margin: 0px; padding: 0px; height: 5px;background:#636b6f;border-radius: 10px 10px 10px 10px;"> </strong>  <span >SCHOOL</span> 
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                
             </div>
         </div>
     </body>
