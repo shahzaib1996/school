@@ -152,7 +152,7 @@ class AdmissionController extends Controller
         $parent->mobile = $adm->mobile;
 
         $parent->save();
-        // $parent_id=$parent->id;
+        $parent_id=$parent->id;
 
         $std = new Student;
         $std->student_fname = $adm->student_fname;
@@ -162,7 +162,7 @@ class AdmissionController extends Controller
         $std->class_req = $adm->class_req;
         $std->student_pic_path = $adm->student_pic_path;
         $std->gender = $adm->gender;
-        $std->parent_id = 1;
+        $std->parent_id = $parent_id;
 
         $std->save();
 

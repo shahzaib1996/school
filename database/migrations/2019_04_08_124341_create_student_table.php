@@ -25,6 +25,7 @@ class CreateStudentTable extends Migration
             $table->string('student_pic_path');
             $table->integer('parent_id')->unsigned()->index();
             $table->foreign('parent_id')->references('id')->on('parant')->onDelete('cascade');
+            $table->boolean('is_deleted')->default(0);
 
             $table->timestamps();
         });

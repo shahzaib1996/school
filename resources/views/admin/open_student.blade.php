@@ -4,7 +4,7 @@
 
 <section class="content-header">
   <h1>
-    Admission Form
+    Student
   </h1>  
 </section>
 
@@ -22,16 +22,11 @@
     <div class="alert {{session('class')}}"><center>{{session('message')}}</center></div>
     @endif
 
-    @if($admission)
+    @if($student)
     <div class="nav-tabs-custom">
       <ul class="nav nav-tabs">
         <li class="active"><a href="#tab_1" data-toggle="tab" id="status">
-          Admission Details 
-          @if($admission->is_approved == 1 )
-          <label class="label label-success">Approved</label>
-          @else
-          <label class="label label-danger">Pending</label>
-          @endif
+          Student Details 
         </a></li>
 
       </ul>
@@ -47,53 +42,49 @@
                 <h4 style="margin-top:0px;">
                   <input type="checkbox" class="" name="edit" id="edit" value="edit"> Enable Editing
                 </h4>
-                <form role="form" action="{{route('admin.admission.update')}}" method="POST" enctype="multipart/form-data">
+                <form role="form" action="{{route('admin.student.update')}}" method="POST" enctype="multipart/form-data">
                   @csrf
                <table class="table table-bordered table-hover f16">
                 <tbody>
                   <tr>
                     <td width="30%">ID#</td>
-                    <td width="70%" > {{$admission->id}} <input type="hidden" name="admission_id" value="{{$admission->id}}"> </td>
-                  </tr>
-
-                  <tr>
-                    <td>Admission Date</td>
-                    <td> {{$admission->admission_date}} </td>
+                    <td width="70%" > {{$student->id}} <input type="hidden" name="student_id" value="{{$student->id}}"> <input type="hidden" name="parant_id" value="{{$student->parent_id}}"> </td>
                   </tr>
 
                   <tr>
                     <td>Student Image</td>
-                    <td> <img src="{{asset('students')}}/{{$admission->student_pic_path}}" style="height: 100px;width: 100px;border-radius: 50px;border:1px solid grey;"> </td>
+                    <td> <img src="{{asset('students')}}/{{$student->student_pic_path}}" style="height: 100px;width: 100px;border-radius: 50px;border:1px solid grey;"> </td>
                   </tr>
 
                   <tr>
                     <td>Student First Name</td>
-                    <td> <span class="state">{{$admission->student_fname}}</span> <input type="hidden" name="fname" value="{{$admission->student_fname}}" class="form-control inhid" required > </td>
+                    <td> <span class="state">{{$student->student_fname}}</span> <input type="hidden" name="fname" value="{{$student->student_fname}}" class="form-control inhid" required > </td>
                   </tr>
 
                   <tr>
                     <td>Student Last Name</td>
-                    <td> <span class="state">{{$admission->student_lname}}</span> <input type="hidden" name="lname" value="{{$admission->student_lname}}" class="form-control inhid" required > </td>
+                    <td> <span class="state">{{$student->student_lname}}</span> <input type="hidden" name="lname" value="{{$student->student_lname}}" class="form-control inhid" required > </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>Class </td>
+                    <td> <span class="state">{{$student->class_req}}</span> <input type="hidden" name="class_req" value="{{$student->class_req}}" class="form-control inhid" required > </td>
                   </tr>
 
                   <tr>
                     <td>Date of Birth </td>
-                    <td> <span class="state">{{$admission->date_of_birth}}</span> <input type="hidden" name="dob" value="{{$admission->date_of_birth}}" class="form-control inhidd" required > </td>
+                    <td> <span class="state">{{$student->date_of_birth}}</span> <input type="hidden" name="dob" value="{{$student->date_of_birth}}" class="form-control inhidd" required > </td>
                   </tr>
 
                   <tr>
                     <td>Place of Birth </td>
-                    <td> <span class="state">{{$admission->place_of_birth}}</span> <input type="hidden" name="pob" value="{{$admission->place_of_birth}}" class="form-control inhid" required > </td>
+                    <td> <span class="state">{{$student->place_of_birth}}</span> <input type="hidden" name="pob" value="{{$student->place_of_birth}}" class="form-control inhid" required > </td>
                   </tr>
 
-                  <tr>
-                    <td>Admission required in class </td>
-                    <td> <span class="state">{{$admission->class_req}}</span> <input type="hidden" name="class_req" value="{{$admission->class_req}}" class="form-control inhid" required > </td>
-                  </tr>
 
                   <tr>
                     <td>Gender</td>
-                    <td> <span class="state">@if($admission->gender == 1) Male @else Female @endif</span>
+                    <td> <span class="state">@if($student->gender == 1) Male @else Female @endif</span>
                       <select  id="gender" name="gender" class="form-control" style="display: none;" required >
                         <option value="">Please Select Gender</option>
                         <option value="1">Male</option>
@@ -104,42 +95,42 @@
 
                   <tr>
                     <td>Father name </td>
-                    <td> <span class="state">{{$admission->father_name}}</span> <input type="hidden" name="father_name" value="{{$admission->father_name}}" class="form-control inhid" required > </td>
+                    <td> <span class="state">{{$student->parent->father_name}}</span> <input type="hidden" name="father_name" value="{{$student->parent->father_name}}" class="form-control inhid" required > </td>
                   </tr>
 
                   <tr>
                     <td>Mother name </td>
-                    <td> <span class="state">{{$admission->mother_name}}</span> <input type="hidden" name="mother_name" value="{{$admission->mother_name}}" class="form-control inhid" required > </td>
+                    <td> <span class="state">{{$student->parent->mother_name}}</span> <input type="hidden" name="mother_name" value="{{$student->parent->mother_name}}" class="form-control inhid" required > </td>
                   </tr>
 
                   <tr>
                     <td>Guardian </td>
-                    <td> <span class="state">{{$admission->guardian}}</span> <input type="hidden" name="guardian" value="{{$admission->guardian}}" class="form-control inhid" > </td>
+                    <td> <span class="state">{{$student->parent->guardian}}</span> <input type="hidden" name="guardian" value="{{$student->parent->guardian}}" class="form-control inhid" > </td>
                   </tr>
 
                   <tr>
                     <td>Phone </td>
-                    <td> <span class="state">{{$admission->phone}}</span> <input type="hidden" name="phone" value="{{$admission->phone}}" class="form-control inhid" > </td>
+                    <td> <span class="state">{{$student->parent->phone}}</span> <input type="hidden" name="phone" value="{{$student->parent->phone}}" class="form-control inhid" > </td>
                   </tr>
 
                   <tr>
                     <td>Mobile </td>
-                    <td> <span class="state">{{$admission->mobile}}</span> <input type="hidden" name="mobile" value="{{$admission->mobile}}" class="form-control inhid" required > </td>
+                    <td> <span class="state">{{$student->parent->mobile}}</span> <input type="hidden" name="mobile" value="{{$student->parent->mobile}}" class="form-control inhid" required > </td>
                   </tr>
 
                   <tr>
                     <td>Address </td>
-                    <td> <span class="state">{{$admission->address}}</span> <input type="hidden" name="address" value="{{$admission->address}}" class="form-control inhid" required > </td>
+                    <td> <span class="state">{{$student->parent->address}}</span> <input type="hidden" name="address" value="{{$student->parent->address}}" class="form-control inhid" required > </td>
                   </tr>
 
                   <tr>
                     <td>Father Occupation </td>
-                    <td> <span class="state">{{$admission->father_occupation}}</span> <input type="hidden" name="occupation" value="{{$admission->father_occupation}}" class="form-control inhid" required > </td>
+                    <td> <span class="state">{{$student->parent->father_occupation}}</span> <input type="hidden" name="occupation" value="{{$student->parent->father_occupation}}" class="form-control inhid" required > </td>
                   </tr>
 
                   <tr>
                     <td>Father CNIC </td>
-                    <td> <span class="state">{{$admission->father_cnic}}</span> <input type="hidden" name="cnic" value="{{$admission->father_cnic}}" class="form-control inhid" required > </td>
+                    <td> <span class="state">{{$student->parent->father_cnic}}</span> <input type="hidden" name="cnic" value="{{$student->parent->father_cnic}}" class="form-control inhid" required > </td>
                   </tr>
 
                   <tr id="select-file" style="display: none;">
@@ -149,11 +140,10 @@
 
                   <tr>
                     <td></td>
-                      @if($admission->is_approved != 1)
                     <td> <input type="submit" name="submit" value="Update Information" class="btn btn-lg btn-primary">  
-                      <input type="button" name="approve" class="btn btn-lg btn-success" id="approve-btn" value="Approve" style="margin-left: 20px;"> 
+                      <input type="button" name="delete" class="btn btn-lg btn-danger" id="delete-btn" value="Delete" style="margin-left: 20px;"> 
                     </td>
-                      @endif
+                      
                   </tr>
 
                 </tbody>
@@ -231,7 +221,7 @@ dt,dd {
 
   $(function () {
 
-    $('#gender').val('{{$admission->gender}}');
+    $('#gender').val('{{$student->gender}}');
 
 
     $('#admissionTable').dataTable({
@@ -259,24 +249,24 @@ dt,dd {
     });
 
 
-    $('#approve-btn').click(function(){
-      var adm_id = parseInt('{{$admission->id}}');
+    $('#delete-btn').click(function(){
+      var std_id = parseInt('{{$student->id}}');
 
-      $.post("{{url('/admin/admission/approve')}}",
+      $.post("{{url('/admin/student/delete')}}",
       {
        "_token": "{{ csrf_token() }}",
-       adm_id: adm_id
+       std_id: std_id
 
      },
      function(data,status) {
 
       if(data === "1") {
-        $('#status').html('Admission Details <label class="label label-success">Approved</label>');
-        alert("Approved!");
+        $('#status').html('Student Details <label class="label label-danger">Deleted</label>');
+        alert("Student Deleted");
 
       } else {
-        $('#status').html('Admission Details <label class="label label-danger">Pending</label>');
-        alert("Failed to Approve");
+        $('#status').html('Student Details <label class="label label-success">Active</label>');
+        alert("Student Deleted");
       } 
 
 

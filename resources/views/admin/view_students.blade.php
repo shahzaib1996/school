@@ -4,7 +4,7 @@
 
 <section class="content-header">
       <h1>
-        Admissions
+        Students
       </h1>  
 </section>
 
@@ -24,40 +24,32 @@
 
         <div class="box box-primary">
             <div class="box-header">
-              <h3 class="box-title">Admissions List</h3>
+              <h3 class="box-title">Students List</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive">
-              <table id="admissionTable" class="table table-bordered table-hover">
+              <table id="studentTable" class="table table-bordered table-hover">
                 <thead>
                 <tr>
+                  <th>Image</th>
                   <th>ID#</th>
                   <th>Student Name</th>
                   <th>Father Name</th>
-                  <th>Mobile</th>
-                  <th>Date</th>
-                  <th>Status</th>
+                  <th>Class</th>
                   <th>View</th>
                 </tr>
                 </thead>
                 <tbody>
                 
-                @foreach( $admissions as $adm )
+                @foreach( $students as $std )
                 <tr>
-                  <td> {{$adm->id}} </td>
-                  <td>{{$adm->student_fname}} {{$adm->student_lname}}</td>
-                  <td>{{$adm->father_name}}</td>
-                  <td>{{$adm->mobile}}</td>
-                  <td>{{ Carbon\Carbon::parse($adm->admission_date)->format('Y-m-d') }}</td>
-                  <td>
-                      @if( $adm->is_approved == 1 )
-                        <label class="label label-success">Approved</label>
-                      @else
-                        <label class="label label-danger">Pending</label>
-                      @endif
-                  </td>
-                  <td>
-                      <a href="../admission/{{$adm->id}}" class="btn btn-success"> <i class="fa fa-list"></i> </a>
+                  <td style="width: 50px;text-align: center;"> <img src="{{asset('students/avatar5.png')}}" class="std-pic"> </td>
+                  <td> {{$std->id}} </td>
+                  <td>{{$std->student_fname}} {{$std->student_lname}}</td>
+                  <td>{{$std->parent->father_name}}</td>
+                  <td>{{$std->class_req}}</td>
+                  <td style="width: 60px;text-align: center;">
+                      <a href="../student/{{$std->id}}" class="btn btn-success"> <i class="fa fa-list"></i> </a>
                   </td>
                  
                 </tr>
@@ -77,13 +69,24 @@
 
 @endsection
 
+@push('css')
+<style type="text/css">
+  table td {
+    vertical-align: middle !important;
+  }
+  .std-pic {
+    height: 40px;width: 40px;border-radius: 20px;
+  }
+</style>
+@endpush
+
 @push('scripts')
 
 
 <script>
     $(function () {
 
-        $('#admissionTable').dataTable({
+        $('#studentTable').dataTable({
           "aaSorting": []
         });
 

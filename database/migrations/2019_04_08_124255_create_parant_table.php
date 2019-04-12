@@ -36,6 +36,6 @@ class CreateParantTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parent');
+        Schema::dropIfExists('parant');
     }
 }

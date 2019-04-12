@@ -4,7 +4,7 @@
 
 <section class="content-header">
       <h1>
-        Admission
+        Student
       </h1>  
 </section>
 
@@ -21,7 +21,7 @@
           <div class="box box-primary">
 
             <div class="box-header with-border">
-              <h2 class="box-title">Admission Form</h2>
+              <h2 class="box-title">New Student Form</h2>
 
             </div>
             <!-- /.box-header -->
@@ -29,7 +29,7 @@
 
             
 
-            <form role="form" action="{{route('admin.admission.create')}}" method="POST" enctype="multipart/form-data">
+            <form role="form" action="{{route('admin.student.create')}}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="box-body">
 
@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label >Class Required</label>
+                  <label >Class</label>
                   <input type="text" class="form-control" id="" name="class_req" placeholder="Enter here..." required>
                 </div>
                 

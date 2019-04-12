@@ -27,4 +27,14 @@ Route::prefix('admin')->group(function () {
 	Route::get('/admission/{id}','AdmissionController@admission')->name('admin.admission');
 	Route::post('/admission/update','AdmissionController@updateAdmission')->name('admin.admission.update');
 	Route::post('/admission/approve','AdmissionController@approveAdmission')->name('admin.admission.approve');
+
+	Route::get('/student/new','StudentController@index')->name('admin.student.new');
+	Route::post('/student/create','StudentController@createStudent')->name('admin.student.create');
+	Route::get('/student/view','StudentController@viewStudents')->name('admin.student.view');
+	Route::get('/student/{id}','StudentController@student')->name('admin.student');
+	Route::post('/student/update','StudentController@updateStudent')->name('admin.student.update');
+	Route::post('/student/delete','StudentController@deleteStudent')->name('admin.student.delete');
+
+
+
 });
