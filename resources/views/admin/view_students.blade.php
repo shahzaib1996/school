@@ -11,9 +11,6 @@
 <!-- Main content -->
 <section class="content container-fluid">
 
-<!--------------------------
- | Your Page Content Here |
--------------------------->
     <div class="row">
       <!-- ./col -->
         <div class="col-md-12">
@@ -43,7 +40,7 @@
                 
                 @foreach( $students as $std )
                 <tr>
-                  <td style="width: 50px;text-align: center;"> <img src="{{asset('students/avatar5.png')}}" class="std-pic"> </td>
+                  <td style="width: 50px;text-align: center;"> <img src="{{asset('students')}}/{{$std->student_pic_path}}" class="std-pic"> </td>
                   <td> {{$std->id}} </td>
                   <td>{{$std->student_fname}} {{$std->student_lname}}</td>
                   <td>{{$std->parent->father_name}}</td>
