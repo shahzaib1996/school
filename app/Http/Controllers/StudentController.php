@@ -59,6 +59,8 @@ class StudentController extends Controller
 		$student->gender = $request->input('gender');
 		$student->place_of_birth = $request->input('pob');
 		$student->class_req = $request->input('class_req');
+		$student->monthly_fees = $request->input('monthly_fees');
+		$student->annual_charges = $request->input('annual_charges');
 
 		$parant->father_name = $request->input('father_name');
 		$parant->mother_name = $request->input('mother_name');
@@ -133,6 +135,8 @@ class StudentController extends Controller
 		$std->gender = $request->input('gender');
 		$std->place_of_birth = $request->input('pob');
 		$std->class_req = $request->input('class_req');
+		$std->monthly_fees = $request->input('monthly_fees');
+		$std->annual_charges = $request->input('annual_charges');
 		$std->student_pic_path = $name;
 
 		// $admission->admission_date = Carbon::parse(now('Asia/Karachi'))->format('Y-m-d H:i:s');

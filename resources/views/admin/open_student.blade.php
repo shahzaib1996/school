@@ -72,6 +72,16 @@
                   </tr>
 
                   <tr>
+                    <td>Class </td>
+                    <td> <span class="state">{{$student->monthly_fees}}</span> <input type="hidden" name="monthly_fees" value="{{$student->monthly_fees}}" class="form-control inhid" required > </td>
+                  </tr>
+
+                  <tr>
+                    <td>Annual Charges </td>
+                    <td> <span class="state">{{$student->annual_charges}}</span> <input type="hidden" name="annual_charges" value="{{$student->annual_charges}}" class="form-control inhid" required > </td>
+                  </tr>
+
+                  <tr>
                     <td>Date of Birth </td>
                     <td> <span class="state">{{$student->date_of_birth}}</span> <input type="hidden" name="dob" value="{{$student->date_of_birth}}" class="form-control inhidd" required > </td>
                   </tr>

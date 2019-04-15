@@ -21,6 +21,8 @@ class CreateAdmissionTable extends Migration
             $table->boolean('gender');
             $table->string('place_of_birth');
             $table->string('class_req');
+            $table->string('monthly_fees');
+            $table->string('annual_charges');
             $table->string('student_pic_path');
 
             $table->string('father_name');

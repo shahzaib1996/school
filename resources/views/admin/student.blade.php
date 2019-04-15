@@ -76,6 +76,16 @@
                   <label >Class</label>
                   <input type="text" class="form-control" id="" name="class_req" placeholder="Enter here..." required>
                 </div>
+
+                <div class="form-group">
+                  <label >Monthly Fees</label>
+                  <input type="text" class="form-control" id="" name="monthly_fees" placeholder="Enter here..." required>
+                </div>
+
+                <div class="form-group">
+                  <label >Annual Charges</label>
+                  <input type="text" class="form-control" id="" name="annual_charges" placeholder="Enter here..." required>
+                </div>
                 
                 <div class="form-group">
                   <label for="exampleInputFile">Select Student Picture</label>

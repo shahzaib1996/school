@@ -25,7 +25,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive">
-              <table id="studentTable" class="table table-bordered table-hover">
+              <table id="studentTable" class="table table-bordered table-hover" style="text-transform:capitalize;">
                 <thead>
                 <tr>
                   <th>Image</th>
@@ -41,7 +41,7 @@
                 @foreach( $students as $std )
                 <tr>
                   <td style="width: 50px;text-align: center;"> <img src="{{asset('students')}}/{{$std->student_pic_path}}" class="std-pic"> </td>
-                  <td> {{$std->id}} </td>
+                  <td style="width: 50px;text-align: center;"> {{$std->id}} </td>
                   <td>{{$std->student_fname}} {{$std->student_lname}}</td>
                   <td>{{$std->parent->father_name}}</td>
                   <td>{{$std->class_req}}</td>

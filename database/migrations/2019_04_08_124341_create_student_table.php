@@ -23,6 +23,8 @@ class CreateStudentTable extends Migration
             $table->string('place_of_birth');
             $table->string('class_req');
             $table->string('student_pic_path');
+            $table->string('monthly_fees');
+            $table->string('annual_charges');
             $table->integer('parent_id')->unsigned()->index();
             $table->foreign('parent_id')->references('id')->on('parant')->onDelete('cascade');
             $table->boolean('is_deleted')->default(0);

@@ -35,6 +35,10 @@ Route::prefix('admin')->group(function () {
 	Route::post('/student/update','StudentController@updateStudent')->name('admin.student.update');
 	Route::post('/student/delete','StudentController@deleteStudent')->name('admin.student.delete');
 
+	Route::get('/student/pdf/view','FeesController@viewStudentsPDF')->name('admin.student.pdf.view');
+	Route::post('/student/pdf/make','FeesController@makeStudentsPDF')->name('admin.student.pdf.make');
+
+
 
 
 });

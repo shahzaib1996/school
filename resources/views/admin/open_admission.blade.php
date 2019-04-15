@@ -92,6 +92,16 @@
                   </tr>
 
                   <tr>
+                    <td>Monthly Fees </td>
+                    <td> <span class="state">{{$admission->monthly_fees}}</span> <input type="hidden" name="monthly_fees" value="{{$admission->monthly_fees}}" class="form-control inhid" required > </td>
+                  </tr>
+
+                  <tr>
+                    <td>Annual Charges </td>
+                    <td> <span class="state">{{$admission->annual_charges}}</span> <input type="hidden" name="annual_charges" value="{{$admission->annual_charges}}" class="form-control inhid" required > </td>
+                  </tr>
+
+                  <tr>
                     <td>Gender</td>
                     <td> <span class="state">@if($admission->gender == 1) Male @else Female @endif</span>
                       <select  id="gender" name="gender" class="form-control" style="display: none;" required >

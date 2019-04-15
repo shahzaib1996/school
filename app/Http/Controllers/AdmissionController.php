@@ -47,6 +47,8 @@ class AdmissionController extends Controller
 		$admission->gender = $request->input('gender');
 		$admission->place_of_birth = $request->input('pob');
 		$admission->class_req = $request->input('class_req');
+		$admission->monthly_fees = $request->input('monthly_fees');
+		$admission->annual_charges = $request->input('annual_charges');
 		$admission->father_name = $request->input('father_name');
 		$admission->mother_name = $request->input('mother_name');
 		$admission->guardian = $request->input('guardian');
@@ -98,6 +100,8 @@ class AdmissionController extends Controller
 		$admission->gender = $request->input('gender');
 		$admission->place_of_birth = $request->input('pob');
 		$admission->class_req = $request->input('class_req');
+		$admission->monthly_fees = $request->input('monthly_fees');
+		$admission->annual_charges = $request->input('annual_charges');
 		$admission->father_name = $request->input('father_name');
 		$admission->mother_name = $request->input('mother_name');
 		$admission->guardian = $request->input('guardian');
@@ -160,6 +164,8 @@ class AdmissionController extends Controller
         $std->date_of_birth = $adm->date_of_birth;
         $std->place_of_birth = $adm->place_of_birth;
         $std->class_req = $adm->class_req;
+        $std->monthly_fees = $adm->monthly_fees;
+        $std->annual_charges = $adm->annual_charges;
         $std->student_pic_path = $adm->student_pic_path;
         $std->gender = $adm->gender;
         $std->parent_id = $parent_id;
