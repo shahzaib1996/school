@@ -152,6 +152,11 @@
             <li><a href="{{route('admin.student.view')}}">View</a></li>
           </ul>
         </li>
+        <li class="">
+          <a href="{{route('admin.student.pdf.view')}}"><i class="fa fa-link"></i> <span>Fee Vouchers</span>
+            
+          </a>
+        </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

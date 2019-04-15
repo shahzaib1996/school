@@ -89,8 +89,8 @@ table td {
   height: 40px;width: 40px;border-radius: 20px;
 }
 input[type="checkbox"].pdf-check {
-  width: 20px; /*Desired width*/
-  height: 20px; /*Desired height*/
+  width: 20px;
+  height: 20px;
 }
 </style>
 @endpush
