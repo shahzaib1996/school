@@ -32,6 +32,22 @@
           <input type="button" class="btn btn-warning uncheck-all" value="Uncheck All" style="margin-right: 20px;">
           <input type="submit" name="submit" class="btn btn-success" value="Make PDF" style="">
 
+          
+          <div class="row">
+            
+          <div class="form-group col-md-3">
+              <label for="">Issue Date</label>
+              <input type="date" class="form-control" id="issueDate" value="{{$issueDate}}" required>
+          </div>
+
+          <div class="form-group col-md-3">
+              <label for="">Due Date</label>
+              <input type="date" class="form-control" id="dueDate" required>
+          </div>
+
+          </div>
+
+
           <table id="studentTable" class="table table-bordered table-hover">
             <thead>
               <tr>
@@ -54,7 +70,7 @@
                   <td>{{$std->parent->father_name}}</td>
                   <td>{{$std->class_req}}</td>
                   <td style="width: 40px;text-align: center;">
-                    <input type="checkbox" name="student_id[]" class="pdf-check" value="{{$std->class_req}}">
+                    <input type="checkbox" name="student_id[]" class="pdf-check" value="{{$std->id}}">
                   </td>
 
                 </tr>

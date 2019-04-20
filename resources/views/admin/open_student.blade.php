@@ -72,7 +72,7 @@
                   </tr>
 
                   <tr>
-                    <td>Class </td>
+                    <td>Monthly Fees </td>
                     <td> <span class="state">{{$student->monthly_fees}}</span> <input type="hidden" name="monthly_fees" value="{{$student->monthly_fees}}" class="form-control inhid" required > </td>
                   </tr>
 
