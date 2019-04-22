@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>MarryWod Academy</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -78,7 +78,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <strong> MARRYWOOD <hr style="margin: 0px; padding: 0px; height: 5px;background:#636b6f;border-radius: 10px 10px 10px 10px;"> </strong>  <span >SCHOOL</span> 
+                    <strong> MARRYWOOD <hr style="margin: 0px; padding: 0px; height: 5px;background:#636b6f;border-radius: 10px 10px 10px 10px;"> </strong>  <span >ACADEMY</span> 
                 </div>
 
                 

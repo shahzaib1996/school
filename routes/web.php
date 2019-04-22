@@ -40,4 +40,9 @@ Route::prefix('admin')->group(function () {
 
 
 
+
+	Route::post('/class/all','FeesController@fill_class_dd');
+
+
+
 });

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>MarryWood School</title>
+  <title>MarryWood Academy</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"> -->
@@ -57,9 +57,9 @@
     <!-- Logo -->
     <a href="{{route('admin.home')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>MW</b>S</span>
+      <span class="logo-mini"><b>MW</b>A</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>MarryWood</b>School</span>
+      <span class="logo-lg"><b>MarryWood</b>Academy</span>
     </a>
 
     <!-- Header Navbar -->
@@ -153,7 +153,7 @@
           </ul>
         </li>
         <li class="">
-          <a href="{{route('admin.student.pdf.view')}}"><i class="fa fa-link"></i> <span>Fee Vouchers</span>
+          <a href="{{route('admin.student.pdf.view')}}"><i class="fa fa-link"></i> <span>Monthly Fee Vouchers</span>
             
           </a>
         </li>
@@ -178,7 +178,7 @@
       Powered By TechGeeks
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2019 <a href="#">MarryWood School</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2019 <a href="#">MarryWood Academy</a>.</strong> All rights reserved.
   </footer>
 
   

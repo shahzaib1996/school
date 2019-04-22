@@ -40,7 +40,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href=""><b>MarryWood</b> School</a>
+    <a href=""><b>MarryWood</b> Academy</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

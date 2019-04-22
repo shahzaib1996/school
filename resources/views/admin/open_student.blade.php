@@ -68,7 +68,11 @@
                   
                   <tr>
                     <td>Class </td>
-                    <td> <span class="state">{{$student->class_req}}</span> <input type="hidden" name="class_req" value="{{$student->class_req}}" class="form-control inhid" required > </td>
+                    <td> <span class="state">{{$student->class_req}}</span> 
+                      <select  id="class_req" name="class_req" class="form-control" style="display: none;" required >
+                        <option value="">Select Class..</option>
+                      </select>
+                    </td>
                   </tr>
 
                   <tr>
@@ -230,6 +234,18 @@ dt,dd {
 <script>
 
   $(function () {
+
+$.post("{{url('/admin/class/all')}}",
+  {
+   "_token": "{{ csrf_token() }}"
+  },
+  function(data,status) {
+    $.each(data,function(index,value){
+      $('#class_req').append(`<option value="${value['class']}">${value['class']}</option>`)
+    })
+    $('#class_req').val('{{$student->class_req}}')
+  }
+);
 
     $('#gender').val('{{$student->gender}}');
 
