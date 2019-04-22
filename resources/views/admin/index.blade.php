@@ -20,7 +20,7 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>44</h3>
+              <h3>{{$studentsCount}}</h3>
 
               <p>Total Students</p>
             </div>

@@ -71,7 +71,7 @@
 
               <div class="form-group col-md-3">
                 <label for="">Select Class To Filter</label>
-                <select id="classFilter" class="form-control" required>
+                <select id="classFilter" class="form-control">
                   <option value="">Select class...</option>
 
                 </select>
