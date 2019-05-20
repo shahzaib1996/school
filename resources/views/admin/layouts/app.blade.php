@@ -157,6 +157,11 @@
             
           </a>
         </li>
+        <li class="">
+          <a href="{{route('admin.class.new')}}"><i class="fa fa-link"></i> <span>Class</span>
+            
+          </a>
+        </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

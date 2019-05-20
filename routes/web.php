@@ -41,7 +41,10 @@ Route::prefix('admin')->group(function () {
 
 
 
-	Route::post('/class/all','FeesController@fill_class_dd');
+	// Route::post('/class/all','FeesController@fill_class_dd');
+	Route::get('/class/new','AdminController@addClasses')->name('admin.class.new');
+	Route::post('/class/create','AdminController@addNewClass')->name('admin.class.create');
+	Route::get('/class/delete/{id}','AdminController@deleteClass')->name('admin.class.delete');
 
 
 
